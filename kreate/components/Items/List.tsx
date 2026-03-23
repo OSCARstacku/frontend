@@ -1,11 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import { useEffect, useState } from 'react';
 import { db } from '@/lib/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
-export default function ListaProductos() {
-    const [items, setItems] = useState([]);
+export default function ItemsList() {
+    const [items, setItems] = useState<any[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
