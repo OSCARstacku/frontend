@@ -17,8 +17,11 @@ export default function ItemsList() {
     }, []);
 
     return (
-        <ul>
-            {items.map(item => <li key={item.id}>{item.nombre}</li>)}
-        </ul>
+        <>
+            <p>LISTADO DE PRODUCTOS O SERVICIOS</p>
+            <ul>
+                {items.map(item => <li key={item.id}>{item.nombre}</li>)}
+            </ul>
+        </>
     );
 }
